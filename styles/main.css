@@ -1,26 +1,222 @@
-.loan__details__input {
+body {
+  padding: 15px;
+  font-family: "Hind Siliguri", sans-serif;
+}
+
+hr {
+  border-color: white;
+  border-width: 0.5px;
+}
+
+#result {
+  background: linear-gradient(to bottom, #dddddd 0%, #ededed 100%);
+  padding-left: 15px;
+  padding-top: 15px;
+  padding-right: 15px;
+}
+
+#loan__details {
+  padding-left: 15px;
+  padding-bottom: 15px;
+}
+
+#loan__details__amount,
+#loan__details__rate,
+#loan__details__ANZRatesSelect,
+#loan__summary__repayments,
+#loan__summary__amount,
+#loan__summary__interest,
+#loan__summary__total,
+.loan__details__loan__length,
+.loan__details__button {
+  font-family: "Hind Siliguri", sans-serif;
+  font-size: 16px;
+  border-radius: 4px;
+  border-width: 1.5px;
+  border-color: #b9c9d0;
+}
+
+#loan__details__amount,
+#loan__details__rate {
+  width: 120px;
+}
+
+.result__label {
+  color: #004165;
+  font-weight: 600;
+}
+
+.loan__summary__triangle {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 15px solid #007ab5;
+  background-color: #ededed;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.loan__summary__triangle__background {
+  background-color: #ededed;
+  height: 25px;
+  position: relative;
+}
+
+.loan__calc {
+  background: #ededed;
+}
+
+.loan__details__question {
+  cursor: pointer;
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  text-align: center;
+  align-items: center;
+  border: 1px solid #C3CCCF;
+  background: linear-gradient(to bottom, #F6F7F7 0%, #DBDBDB 100%);
+  margin-left: 5px;
+  margin-top: 10px;
+  color: #1283BC;
+  font-weight: 800;
+}
+
+.loan__details__arrow {
+  width: 5px;
+  padding-bottom: 1px;
+  cursor: pointer;
+  padding-left: 4px;
+  color: #4c7db8;
+}
+
+#loan__details__ANZRatesSelect {
+  display: none;
+  margin-left: 5px;
+}
+
+.loan__details__ANZrates {
+  cursor: pointer;
+  display: inline-block;
+  margin-left: 7px !important;
+  color: #4c7db8;
+}
+
+#loan__summary {
+  background: linear-gradient(to bottom, #007ab5 0%, #004162 100%);
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 15px;
+}
+
+.loan__summary__label {
+  color: white;
+}
+.loan__summary__minRepayments {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loan__summary__heading {
+  padding-top: 20px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+.loan__details__label {
+  margin-top: 15px;
+  display: inline-block;
+}
+
+.loan__summary__outcomes {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: left;
+  padding-top: 50px;
+}
+
+button {
+  margin-top: 15px;
+  font-size: 20px;
+  font-weight: 800;
+  padding-left: 70px;
+  padding-right: 70px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 4px;
+  border-color: #004366;
+  color: white;
+  background: linear-gradient(to bottom, #2091cb 0%, #0F5C87 100%);
+  font-weight: 100;
+  border-width: 1.5px;
+}
+
+.loan__summary__minRepayments {
+  display: flex;
+  flex-direction: column;
+}
+.loan__details__loan__length {
+    width: 120px;
+}
+
+#loan__summary__repayments,
+#loan__summary__amount,
+#loan__summary__interest,
+#loan__summary__total {
+  border: none;
+  background-color: transparent;
+}
+
+.loan__summary__line {
+  justify-content: left;
+  border-color: #4e97ba;
+  border-width: 0.5px;
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    margin-left: 300px;
+    margin-right: 300px;
+  }
+  .loan__summary__outcomes {
     display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    gap: 20px;
+  }
+  .loan__summary__minRepayments {
+    padding-top: 10px;
+    display: flex;
+    flex-direction: row;
+  }
+  .loan__summary__heading {
+    display: flex;
+    justify-content: center;
     align-items: center;
   }
-  
-  .loan__details__input input {
-    margin-right: 10px; 
+  #loan__details {
+    padding-bottom: 0px;
   }
-  
-  .loan__details__question {
-    cursor: pointer;
+  #loan__details__amount,
+  #loan__details__rate {
+    width: 180px;
   }
+}
 
-  .loan__details__arrow {
-    width: 5px;
-    padding-bottom: 1px;
+@media screen and (min-width: 1440px) {
+  body {
+    margin-left: 650px;
+    margin-right: 650px;
   }
-
-  #loan__details__ANZRatesSelect {
-    display: none;
-  }
-  
-  #loan__details__ANZrates {
-    cursor: pointer;
-  }
-
+}

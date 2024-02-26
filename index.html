@@ -4,45 +4,71 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="/styles/main.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <script src="/scripts/mortgage-calc.js" type="text/javascript"></script>
     <title>mortgage-calculator</title>
   </head>
   <body>
+    <div class="loan__calc">
     <section id="result">
-      <label>Scenario 1</label>
+      <label class="result__label">SCENARIO 1</label>
       <div id="result__calculation">Monthly</div>
+      <hr />
     </section>
-    <hr />
     <section id="loan__details">
-      <label>Loan amount:*</label><br>
+      <label class="loan__details__label">Loan amount:*</label><br />
       <input id="loan__details__amount" type="text" placeholder="$" />
       <div class="loan__details__question">?</div>
-      <label>Interest rate:*</label><br>
+      <br />
+      <div class="loan__details__interestRate">
+      <label class="loan__details__label">Interest rate:*</label><br />
       <input id="loan__details__rate" type="text" placeholder="%" />
-      <label class="loan__details__ANZrates">View ANZ rates</label>
-      <img class="loan__details__arrow" src="public/arrow.png" />
-      <select id="loan__details__ANZRatesSelect" class="loan__details__select__rate">
+      <label class="loan__details__ANZrates">View ANZ rates<img class="loan__details__arrow" src="public/arrow.png" /></label>
+      <select
+        id="loan__details__ANZRatesSelect"
+        class="loan__details__select__rate"
+      >
         <optgroup label="Current ANZ Rates">
-            <div class="loan__details__select__rate__heading">&times;</div>
-            <option value="7.35">7.35% p.a. 6 months Fixed Special - terms apply</option>
-            <option value="7.39">7.39% p.a. 1 year Fixed Special - terms apply</option>
-            <option value="7.15">7.15% p.a. 18 months Fixed Special - terms apply</option>
-            <option value="6.89">6.89% p.a. 2 years Fixed Special - terms apply</option>
-            <option value="6.75">6.75% p.a. 3 years Fixed Special - terms apply</option>
-            <option value="7.95">7.95% p.a. 6 months Fixed</option>
-            <option value="7.99">7.99% p.a. 1 year Fixed</option>
-            <option value="7.75">7.75% p.a. 18 months Fixed</option>
-            <option value="7.49">7.49% p.a. 2 years Fixed</option>
-            <option value="7.35">7.35% p.a. 3 years Fixed</option>
-            <option value="7.34">7.34% p.a. 4 years Fixed</option>
-            <option value="7.34">7.34% p.a. 5 years Fixed</option>
-            <option value="8.64">8.64% p.a. Floating</option>
-            <option value="8.75">8.75% p.a. Flexible</option>
-            <option value="1.00">1.00% p.a. 3 years Fixed Good Energy - terms apply*</option>
-          </optgroup>
-      </select><br>
-      <label>Loan length:*</label><br>
-      <select class="loan__details__loan__length" onchange="displayLoanYears(this.value)">
+          <div class="loan__details__select__rate__heading">&times;</div>
+          <option value="7.35">
+            7.35% p.a. 6 months Fixed Special - terms apply
+          </option>
+          <option value="7.39">
+            7.39% p.a. 1 year Fixed Special - terms apply
+          </option>
+          <option value="7.15">
+            7.15% p.a. 18 months Fixed Special - terms apply
+          </option>
+          <option value="6.89">
+            6.89% p.a. 2 years Fixed Special - terms apply
+          </option>
+          <option value="6.75">
+            6.75% p.a. 3 years Fixed Special - terms apply
+          </option>
+          <option value="7.95">7.95% p.a. 6 months Fixed</option>
+          <option value="7.99">7.99% p.a. 1 year Fixed</option>
+          <option value="7.75">7.75% p.a. 18 months Fixed</option>
+          <option value="7.49">7.49% p.a. 2 years Fixed</option>
+          <option value="7.35">7.35% p.a. 3 years Fixed</option>
+          <option value="7.34">7.34% p.a. 4 years Fixed</option>
+          <option value="7.34">7.34% p.a. 5 years Fixed</option>
+          <option value="8.64">8.64% p.a. Floating</option>
+          <option value="8.75">8.75% p.a. Flexible</option>
+          <option value="1.00">
+            1.00% p.a. 3 years Fixed Good Energy - terms apply*
+          </option>
+        </optgroup></select
+      ></div><br />
+      <label class="loan__details__label">Loan length:*</label><br />
+      <select
+        class="loan__details__loan__length"
+        onchange="displayLoanYears(this.value)"
+      >
         <option value="1">1 year</option>
         <option value="2">2 years</option>
         <option value="3">3 years</option>
@@ -74,7 +100,7 @@
         <option value="29">29 years</option>
         <option value="30">30 years</option>
       </select>
-      <select onchange="displayLoanMonths(this.value)">
+      <select class="loan__details__loan__length" onchange="displayLoanMonths(this.value)">
         <option value="0">0 months</option>
         <option value="1">1 month</option>
         <option value="2">2 months</option>
@@ -86,35 +112,41 @@
         <option value="8">8 months</option>
         <option value="9">9 months</option>
         <option value="10">10 months</option>
-        <option value="11">11 months</option>
-      </select><br>
-      <button class="loan__details__button" onClick="calculate()">Calculate</button>
+        <option value="11">11 months</option></select
+      ><br />
+      <button class="loan__details__button" onClick="calculate()">
+        Calculate
+      </button>
+    </div>
     </section>
+    <div class="loan__summary__triangle__background"><div class="loan__summary__triangle"></div></div>
     <section id="loan__summary">
-        <div>Your minimum repayments</div>
-        <input id="loan__summary__repayments" type="text" placeholder="$">
-        <select onchange="displaySummaryRepayments(this.value)">
-            <option value="4">Monthly</option>
-            <option value="2">Fortnightly</option>
-            <option value="1">Weekly</option>
-            </select>
-            <div class="loan__summary__outcomes">
-                <div class="loan__summary__amount">
-                    <hr>
-                    <label>Loan amount:</label>
-                    <input id="loan__summary__amount" type="text" placeholder="$">
-                </div>
-                <div class="loan__summary__interest">
-                    <hr>
-                    <label>Loan interest:</label>
-                    <input id="loan__summary__interest" type="text" placeholder="$">
-                </div>
-                <div class="loan__summary__total">
-                    <hr>
-                    <label>Your total cost:</label>
-                    <input id="loan__summary__total" type="text" placeholder="$">
-                </div>
-            </div>
+      <div class="loan__summary__heading">Your minimum repayments</div>
+      <div class="loan__summary__minRepayments">
+        <input id="loan__summary__repayments" type="text"/>
+        <select  class="loan__details__loan__length" onchange="displaySummaryRepayments(this.value)">
+          <option value="4">Monthly</option>
+          <option value="2">Fortnightly</option>
+          <option value="1">Weekly</option>
+        </select>
+      </div>
+      <div class="loan__summary__outcomes">
+        <div class="loan__summary__amount">
+          <hr class="loan__summary__line" />
+          <label class="loan__summary__label">Loan amount:</label><br />
+          <input id="loan__summary__amount" type="text"/>
+        </div>
+        <div class="loan__summary__interest">
+          <hr class="loan__summary__line" />
+          <label class="loan__summary__label">Loan interest:</label><br />
+          <input id="loan__summary__interest" type="text"/>
+        </div>
+        <div class="loan__summary__total">
+          <hr class="loan__summary__line" />
+          <label class="loan__summary__label">Your total cost:</label><br />
+          <input id="loan__summary__total" type="text"/>
+        </div>
+      </div>
     </section>
   </body>
 </html>
