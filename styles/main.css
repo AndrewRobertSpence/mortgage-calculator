@@ -1,0 +1,26 @@
+.loan__details__input {
+    display: flex;
+    align-items: center;
+  }
+  
+  .loan__details__input input {
+    margin-right: 10px; 
+  }
+  
+  .loan__details__question {
+    cursor: pointer;
+  }
+
+  .loan__details__arrow {
+    width: 5px;
+    padding-bottom: 1px;
+  }
+
+  #loan__details__ANZRatesSelect {
+    display: none;
+  }
+  
+  #loan__details__ANZrates {
+    cursor: pointer;
+  }
+
